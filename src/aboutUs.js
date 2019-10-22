@@ -18,7 +18,7 @@ let aboutUsPage = (()=> {
     grilled delights you won’t know where to start! All yours to savor 
     in our stylishly casual dining room, along with contemporary cocktails, 
     decadent desserts and just-right service.`
-    text.classList.add('body-text')
+    text.classList.add('body-text');
     leftBox.classList.add('leftbox');
     leftBox.appendChild(title);
     leftBox.appendChild(text);

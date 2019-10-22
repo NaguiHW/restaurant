@@ -1,7 +1,7 @@
 import './style.css';
 import { aboutUsPage } from './aboutUs';
 import { restaurantMenuPage } from './restaurantMenu';
-// import { locationPage } from './location';
+import { locationPage } from './location';
 // import { schedulePage } from './schedule';
 
 let mainPage = (()=> {
@@ -52,7 +52,7 @@ let mainPage = (()=> {
     } else if (event.target.innerHTML === 'Menu') {
       restaurantMenuPage.generate(body);
     } else if (event.target.innerHTML === 'Location') {
-      body.innerHTML = 'Location'
+      locationPage.generate(body);
     } else if (event.target.innerHTML === 'Schedule') {
       body.innerHTML = 'Schedule'
     }
