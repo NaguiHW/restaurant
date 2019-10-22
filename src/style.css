@@ -47,13 +47,18 @@
 .body {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 25px 10px;
+  padding: 25px 0px;
 }
 
 .body-content {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .body-title {
@@ -77,5 +82,34 @@
 
 .rightbox img {
   width: 80%;
+}
+
+.mini-menu {
+  min-width: 400px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 25px 0px;
+}
+
+.mini-menu-content-left {
+  width: 300px;
+}
+
+.mini-menu-content-right {
+  width: 100px;
+}
+
+.restaurant-menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 /*# sourceMappingURL=style.css.map */
