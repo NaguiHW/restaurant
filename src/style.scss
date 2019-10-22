@@ -1,3 +1,41 @@
-body {
-  background-color: aqua;
+@import url('https://fonts.googleapis.com/css?family=Sarabun&display=swap');
+
+*{
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Sarabun', sans-serif;
+}
+
+#content {
+  width: 1200px;
+  height: 100vh;
+  margin: 0 auto;
+  background-color: gray;
+}
+
+.main-title {
+  text-align: center;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  background-color: #723D46;
+  color: #ECFcff;
+}
+
+.menu {
+  background-color: #472D30;
+  height: 50px;
+  display: flex;
+}
+
+.tab {
+  height: 50px;
+  width: 25%;
+  text-align: center;
+  color: white;
+  padding-top: 9px;
+  font-size: 20px;
+}
+
+.tab:hover{
+  background-color: #E26D5C;
 }
