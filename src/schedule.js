@@ -1,9 +1,9 @@
-let schedulePage = (()=> {
-  let content = document.createElement('div');
-  let title = document.createElement('h2');
-  let text = document.createElement('p');
+const schedulePage = (() => {
+  const content = document.createElement('div');
+  const title = document.createElement('h2');
+  const text = document.createElement('p');
 
-  let generate = parent => {
+  const generate = parent => {
     title.innerHTML = 'Schedule';
     title.classList.add('body-title');
     text.innerHTML = `<b>M-T</b>h 4:00pm – 10:00pm<br>
@@ -13,9 +13,9 @@ let schedulePage = (()=> {
     content.appendChild(title);
     content.appendChild(text);
     parent.appendChild(content);
-  }
+  };
 
-  return {generate};
+  return { generate };
 })();
 
-export {schedulePage};
+export { schedulePage };

@@ -1,16 +1,16 @@
-let restaurantMenuPage = (()=> {
-  let content = document.createElement('div');
-  let titleContainer = document.createElement('div');
-  let title = document.createElement('h2');
-  let bodyContainer = document.createElement('div');
-  let menu1 = document.createElement('div');
-  let menu2 = document.createElement('div');
-  let menu3 = document.createElement('div');
-  let menu4 = document.createElement('div');
-  let menu5 = document.createElement('div');
-  let menu6 = document.createElement('div');
+const restaurantMenuPage = (() => {
+  const content = document.createElement('div');
+  const titleContainer = document.createElement('div');
+  const title = document.createElement('h2');
+  const bodyContainer = document.createElement('div');
+  const menu1 = document.createElement('div');
+  const menu2 = document.createElement('div');
+  const menu3 = document.createElement('div');
+  const menu4 = document.createElement('div');
+  const menu5 = document.createElement('div');
+  const menu6 = document.createElement('div');
 
-  let generate = parent => {
+  const generate = parent => {
     title.innerHTML = 'Menu';
     title.classList.add('body-title');
     titleContainer.appendChild(title);
@@ -22,8 +22,8 @@ let restaurantMenuPage = (()=> {
     content.appendChild(titleContainer);
     content.appendChild(bodyContainer);
     parent.appendChild(content);
-  }
-  
+  };
+
   let addClassesToMenu = () => {
     menu1.classList.add('mini-menu');
     menu2.classList.add('mini-menu');
@@ -31,7 +31,7 @@ let restaurantMenuPage = (()=> {
     menu4.classList.add('mini-menu');
     menu5.classList.add('mini-menu');
     menu6.classList.add('mini-menu');
-  }
+  };
 
   let addMenuToBodyContainer = () => {
     bodyContainer.appendChild(menu1);
@@ -40,7 +40,7 @@ let restaurantMenuPage = (()=> {
     bodyContainer.appendChild(menu4);
     bodyContainer.appendChild(menu5);
     bodyContainer.appendChild(menu6);
-  }
+  };
 
   let addContentToMiniMenu = () => {
     menu1.innerHTML = `<div class="mini-menu-content-left">
@@ -85,9 +85,9 @@ let restaurantMenuPage = (()=> {
                        <div class="mini-menu-content-right">
                         <p class="mini-menu-price">$18.95</p>
                        </div>`;
-  }
+  };
 
-  return {generate};
+  return { generate };
 })();
 
 export { restaurantMenuPage };

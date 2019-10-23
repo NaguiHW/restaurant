@@ -1,12 +1,12 @@
-let locationPage = (()=> {
-  let content = document.createElement('div');
-  let leftBox = document.createElement('div');
-  let rightBox = document.createElement('div');
-  let title = document.createElement('h2');
-  let text = document.createElement('p');
-  let imageLocation = document.createElement('img');
+const locationPage = (() => {
+  const content = document.createElement('div');
+  const leftBox = document.createElement('div');
+  const rightBox = document.createElement('div');
+  const title = document.createElement('h2');
+  const text = document.createElement('p');
+  const imageLocation = document.createElement('img');
 
-  let generate = parent => {
+  const generate = parent => {
     content.classList.add('body-content');
     imageLocation.setAttribute('src', './img/locationImg.png');
     imageLocation.setAttribute('alt', 'location');
@@ -24,9 +24,9 @@ let locationPage = (()=> {
     content.appendChild(leftBox);
     content.appendChild(rightBox);
     parent.appendChild(content);
-  }
+  };
 
-  return {generate};
+  return { generate };
 })();
 
 export { locationPage };

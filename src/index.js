@@ -3,32 +3,32 @@ import { aboutUsPage } from './aboutUs';
 import { restaurantMenuPage } from './restaurantMenu';
 import { locationPage } from './location';
 import { schedulePage } from './schedule';
-import './img/aboutUsImg.jpg'
-import './img/locationImg.png'
+import './img/aboutUsImg.jpg';
+import './img/locationImg.png';
 
-let mainPage = (()=> {
-  let content = document.getElementById('content');
-  let title = document.createElement('h1');
-  let webMenu = document.createElement('div');
-  let aboutUs = document.createElement('div');
-  let restaurantMenu = document.createElement('div');
-  let location = document.createElement('div');
-  let schedule = document.createElement('div');
-  let body = document.createElement('div');
+const mainPage = (() => {
+  const content = document.getElementById('content');
+  const title = document.createElement('h1');
+  const webMenu = document.createElement('div');
+  const aboutUs = document.createElement('div');
+  const restaurantMenu = document.createElement('div');
+  const location = document.createElement('div');
+  const schedule = document.createElement('div');
+  const body = document.createElement('div');
 
-  let load = () => {
+  const load = () => {
     createTitle();
     createMenu();
     addAction();
     loadBody();
     aboutUsPage.generate(body);
-  }
-  
+  };
+
   let createTitle = () => {
-    title.innerHTML = `Sushi's House`;
+    title.innerHTML = 'Sushi House';
     title.classList.add('main-title');
     content.appendChild(title);
-  }
+  };
 
   let createMenu = () => {
     webMenu.classList.add('menu');
@@ -45,9 +45,9 @@ let mainPage = (()=> {
     webMenu.appendChild(location);
     webMenu.appendChild(schedule);
     content.appendChild(webMenu);
-  }
+  };
 
-  let loadTab = event => {
+  const loadTab = event => {
     body.innerHTML = '';
     if (event.target.innerHTML === 'About Us') {
       aboutUsPage.generate(body);
@@ -58,21 +58,21 @@ let mainPage = (()=> {
     } else if (event.target.innerHTML === 'Schedule') {
       schedulePage.generate(body);
     }
-  }
+  };
 
   let addAction = () => {
     aboutUs.addEventListener('click', loadTab);
     restaurantMenu.addEventListener('click', loadTab);
     location.addEventListener('click', loadTab);
     schedule.addEventListener('click', loadTab);
-  }
-  
+  };
+
   let loadBody = () => {
     body.classList.add('body');
     content.appendChild(body);
-  }
+  };
 
-  return {load}
+  return { load };
 })();
 
 mainPage.load();
