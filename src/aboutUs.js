@@ -22,7 +22,7 @@ let aboutUsPage = (()=> {
     leftBox.classList.add('leftbox');
     leftBox.appendChild(title);
     leftBox.appendChild(text);
-    imageAboutUs.setAttribute('src', 'src/img/aboutUsImg.jpg');
+    imageAboutUs.setAttribute('src', './img/aboutUsImg.jpg');
     imageAboutUs.setAttribute('alt', 'About Us Image');
     rightBox.classList.add('rightbox');
     rightBox.appendChild(imageAboutUs);
