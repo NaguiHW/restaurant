@@ -1,4 +1,4 @@
-/*global document*/
+/* global document */
 
 export const locationPage = (() => {
   const content = document.createElement('div');

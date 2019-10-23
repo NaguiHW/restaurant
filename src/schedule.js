@@ -1,4 +1,4 @@
-/*global document*/
+/* global document */
 
 export const schedulePage = (() => {
   const content = document.createElement('div');

@@ -1,4 +1,4 @@
-/*global document*/
+/* global document */
 
 export const restaurantMenuPage = (() => {
   const content = document.createElement('div');

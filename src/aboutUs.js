@@ -1,4 +1,4 @@
-/*global document*/
+/* global document */
 
 export const aboutUsPage = (() => {
   const content = document.createElement('div');
