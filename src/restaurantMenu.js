@@ -12,7 +12,7 @@ export const restaurantMenuPage = (() => {
   const menu5 = document.createElement('div');
   const menu6 = document.createElement('div');
 
-  let addClassesToMenu = () => {
+  const addClassesToMenu = () => {
     menu1.classList.add('mini-menu');
     menu2.classList.add('mini-menu');
     menu3.classList.add('mini-menu');
@@ -21,7 +21,7 @@ export const restaurantMenuPage = (() => {
     menu6.classList.add('mini-menu');
   };
 
-  let addMenuToBodyContainer = () => {
+  const addMenuToBodyContainer = () => {
     bodyContainer.appendChild(menu1);
     bodyContainer.appendChild(menu2);
     bodyContainer.appendChild(menu3);
@@ -30,7 +30,7 @@ export const restaurantMenuPage = (() => {
     bodyContainer.appendChild(menu6);
   };
 
-  let addContentToMiniMenu = () => {
+  const addContentToMiniMenu = () => {
     menu1.innerHTML = `<div class="mini-menu-content-left">
                         <h4 class="mini-menu-title">Kung Pao Calamari</h4>
                         <p class="mini-menu-text">Thom Thom Kung Pao sauce / ground peanuts / scallion</p>

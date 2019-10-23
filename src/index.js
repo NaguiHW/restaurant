@@ -18,13 +18,13 @@ const mainPage = (() => {
   const schedule = document.createElement('div');
   const body = document.createElement('div');
 
-  let createTitle = () => {
+  const createTitle = () => {
     title.innerHTML = 'Sushi House';
     title.classList.add('main-title');
     content.appendChild(title);
   };
 
-  let createMenu = () => {
+  const createMenu = () => {
     webMenu.classList.add('menu');
     aboutUs.classList.add('tab');
     restaurantMenu.classList.add('tab');
@@ -54,14 +54,14 @@ const mainPage = (() => {
     }
   };
 
-  let addAction = () => {
+  const addAction = () => {
     aboutUs.addEventListener('click', loadTab);
     restaurantMenu.addEventListener('click', loadTab);
     location.addEventListener('click', loadTab);
     schedule.addEventListener('click', loadTab);
   };
 
-  let loadBody = () => {
+  const loadBody = () => {
     body.classList.add('body');
     content.appendChild(body);
   };
