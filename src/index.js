@@ -1,3 +1,5 @@
+/* global document */
+
 import './style.css';
 import { aboutUsPage } from './aboutUs';
 import { restaurantMenuPage } from './restaurantMenu';
@@ -15,14 +17,6 @@ const mainPage = (() => {
   const location = document.createElement('div');
   const schedule = document.createElement('div');
   const body = document.createElement('div');
-
-  const load = () => {
-    createTitle();
-    createMenu();
-    addAction();
-    loadBody();
-    aboutUsPage.generate(body);
-  };
 
   let createTitle = () => {
     title.innerHTML = 'Sushi House';
@@ -47,7 +41,7 @@ const mainPage = (() => {
     content.appendChild(webMenu);
   };
 
-  const loadTab = event => {
+  const loadTab = (event) => {
     body.innerHTML = '';
     if (event.target.innerHTML === 'About Us') {
       aboutUsPage.generate(body);
@@ -70,6 +64,14 @@ const mainPage = (() => {
   let loadBody = () => {
     body.classList.add('body');
     content.appendChild(body);
+  };
+
+  const load = () => {
+    createTitle();
+    createMenu();
+    addAction();
+    loadBody();
+    aboutUsPage.generate(body);
   };
 
   return { load };

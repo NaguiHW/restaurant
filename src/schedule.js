@@ -1,9 +1,11 @@
-const schedulePage = (() => {
+/* global document */
+
+export const schedulePage = (() => {
   const content = document.createElement('div');
   const title = document.createElement('h2');
   const text = document.createElement('p');
 
-  const generate = parent => {
+  const generate = (parent) => {
     title.innerHTML = 'Schedule';
     title.classList.add('body-title');
     text.innerHTML = `<b>M-T</b>h 4:00pm – 10:00pm<br>
@@ -17,5 +19,3 @@ const schedulePage = (() => {
 
   return { generate };
 })();
-
-export { schedulePage };

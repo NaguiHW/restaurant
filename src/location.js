@@ -1,4 +1,6 @@
-const locationPage = (() => {
+/* global document */
+
+export const locationPage = (() => {
   const content = document.createElement('div');
   const leftBox = document.createElement('div');
   const rightBox = document.createElement('div');
@@ -6,7 +8,7 @@ const locationPage = (() => {
   const text = document.createElement('p');
   const imageLocation = document.createElement('img');
 
-  const generate = parent => {
+  const generate = (parent) => {
     content.classList.add('body-content');
     imageLocation.setAttribute('src', './img/locationImg.png');
     imageLocation.setAttribute('alt', 'location');
@@ -28,5 +30,3 @@ const locationPage = (() => {
 
   return { generate };
 })();
-
-export { locationPage };
