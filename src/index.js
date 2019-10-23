@@ -2,7 +2,9 @@ import './style.css';
 import { aboutUsPage } from './aboutUs';
 import { restaurantMenuPage } from './restaurantMenu';
 import { locationPage } from './location';
-// import { schedulePage } from './schedule';
+import { schedulePage } from './schedule';
+import './img/aboutUsImg.jpg'
+import './img/locationImg.png'
 
 let mainPage = (()=> {
   let content = document.getElementById('content');
@@ -54,7 +56,7 @@ let mainPage = (()=> {
     } else if (event.target.innerHTML === 'Location') {
       locationPage.generate(body);
     } else if (event.target.innerHTML === 'Schedule') {
-      body.innerHTML = 'Schedule'
+      schedulePage.generate(body);
     }
   }
 

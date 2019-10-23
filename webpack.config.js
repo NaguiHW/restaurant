@@ -30,8 +30,10 @@ module.exports = {
       {
         test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
         use: {
-          loader: 'url-loader',
+          loader: 'file-loader',
           options: {
+            name: '[name].[ext]',
+            outputPath: 'img/',
             limit: 900000
           }
         }

@@ -8,7 +8,7 @@ let locationPage = (()=> {
 
   let generate = parent => {
     content.classList.add('body-content');
-    imageLocation.setAttribute('src', 'src/img/locationImg.png');
+    imageLocation.setAttribute('src', './img/locationImg.png');
     imageLocation.setAttribute('alt', 'location');
     title.innerHTML = 'Location';
     title.classList.add('body-title');
