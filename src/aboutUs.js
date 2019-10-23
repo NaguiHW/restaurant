@@ -1,4 +1,6 @@
-const aboutUsPage = (() => {
+/*global document*/
+
+export const aboutUsPage = (() => {
   const content = document.createElement('div');
   const leftBox = document.createElement('div');
   const rightBox = document.createElement('div');
@@ -6,7 +8,7 @@ const aboutUsPage = (() => {
   const text = document.createElement('p');
   const imageAboutUs = document.createElement('img');
 
-  const generate = parent => {
+  const generate = (parent) => {
     content.classList.add('body-content');
     title.innerHTML = 'About Us';
     title.classList.add('body-title');
@@ -33,5 +35,3 @@ const aboutUsPage = (() => {
 
   return { generate };
 })();
-
-export { aboutUsPage };

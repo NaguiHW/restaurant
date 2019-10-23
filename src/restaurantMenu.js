@@ -1,4 +1,6 @@
-const restaurantMenuPage = (() => {
+/*global document*/
+
+export const restaurantMenuPage = (() => {
   const content = document.createElement('div');
   const titleContainer = document.createElement('div');
   const title = document.createElement('h2');
@@ -9,20 +11,6 @@ const restaurantMenuPage = (() => {
   const menu4 = document.createElement('div');
   const menu5 = document.createElement('div');
   const menu6 = document.createElement('div');
-
-  const generate = parent => {
-    title.innerHTML = 'Menu';
-    title.classList.add('body-title');
-    titleContainer.appendChild(title);
-    bodyContainer.classList.add('body-content');
-    addClassesToMenu();
-    addContentToMiniMenu();
-    addMenuToBodyContainer();
-    content.classList.add('restaurant-menu');
-    content.appendChild(titleContainer);
-    content.appendChild(bodyContainer);
-    parent.appendChild(content);
-  };
 
   let addClassesToMenu = () => {
     menu1.classList.add('mini-menu');
@@ -87,7 +75,19 @@ const restaurantMenuPage = (() => {
                        </div>`;
   };
 
+  const generate = (parent) => {
+    title.innerHTML = 'Menu';
+    title.classList.add('body-title');
+    titleContainer.appendChild(title);
+    bodyContainer.classList.add('body-content');
+    addClassesToMenu();
+    addContentToMiniMenu();
+    addMenuToBodyContainer();
+    content.classList.add('restaurant-menu');
+    content.appendChild(titleContainer);
+    content.appendChild(bodyContainer);
+    parent.appendChild(content);
+  };
+
   return { generate };
 })();
-
-export { restaurantMenuPage };
