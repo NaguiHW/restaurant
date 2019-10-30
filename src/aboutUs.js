@@ -1,4 +1,5 @@
 /* global document */
+/* eslint-disable import/prefer-default-export */
 
 export const aboutUsPage = (() => {
   const content = document.createElement('div');

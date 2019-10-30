@@ -1,4 +1,5 @@
 /* global document */
+/* eslint-disable import/prefer-default-export */
 
 export const schedulePage = (() => {
   const content = document.createElement('div');
