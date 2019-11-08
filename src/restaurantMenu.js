@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const restaurantMenuPage = (() => {
   const content = document.createElement('div');
   const titleContainer = document.createElement('div');

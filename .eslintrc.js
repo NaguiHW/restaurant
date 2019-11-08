@@ -2,10 +2,9 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
+    commonjs: true,
   },
-  extends: [
-    'airbnb-base',
-  ],
+  extends: 'eslint:recommended',
   globals: {
     Atomics: 'readonly',
     SharedArrayBuffer: 'readonly',
@@ -15,5 +14,8 @@ module.exports = {
     sourceType: 'module',
   },
   rules: {
+    'no-shadow': 0,
+    'no-param-reassign': 0,
+    'eol-last': 0,
   },
 };

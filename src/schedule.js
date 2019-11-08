@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const schedulePage = (() => {
   const content = document.createElement('div');
   const title = document.createElement('h2');

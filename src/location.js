@@ -1,5 +1,3 @@
-/* eslint-disable import/prefer-default-export */
-
 export const locationPage = (() => {
   const content = document.createElement('div');
   const leftBox = document.createElement('div');
