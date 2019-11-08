@@ -1,5 +1,3 @@
-/* global document */
-
 import './style.css';
 import { aboutUsPage } from './aboutUs';
 import { restaurantMenuPage } from './restaurantMenu';

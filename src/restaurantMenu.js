@@ -1,4 +1,3 @@
-/* global document */
 /* eslint-disable import/prefer-default-export */
 
 export const restaurantMenuPage = (() => {

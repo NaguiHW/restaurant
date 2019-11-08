@@ -4,28 +4,28 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: {
-    index: path.resolve(__dirname, 'src/index.js')
+    index: path.resolve(__dirname, 'src/index.js'),
   },
   mode: 'production',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: '[name].js'
+    filename: '[name].js',
   },
   module: {
     rules: [
       {
         test: /\.js$/,
         use: ['babel-loader'],
-        exclude: /node_modules/
+        exclude: /node_modules/,
       },
       {
         test: /\.css$/,
         use: [
           {
-            loader: MiniCSSExtractPlugin.loader
+            loader: MiniCSSExtractPlugin.loader,
           },
-          'css-loader'
-        ]
+          'css-loader',
+        ],
       },
       {
         test: /\.jpg|png|gif|woff|eot|ttf|svg|mp4|webm$/,
@@ -34,26 +34,26 @@ module.exports = {
           options: {
             name: '[name].[ext]',
             outputPath: 'img/',
-            limit: 900000
-          }
-        }
-      }
-    ]
+            limit: 900000,
+          },
+        },
+      },
+    ],
   },
   plugins: [
     new HtmlWebpackPlugin({
       title: 'Plugins',
-      template: path.resolve(__dirname, 'src/index.html')
+      template: path.resolve(__dirname, 'src/index.html'),
     }),
     new MiniCSSExtractPlugin({
-      filename: '[name].css'
-    })
+      filename: '[name].css',
+    }),
   ],
   optimization: {
     splitChunks: {
       chunks: 'all',
       minSize: 0,
-      name: 'commons'
-    }
-  }
-}
+      name: 'commons',
+    },
+  },
+};
